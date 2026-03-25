@@ -12,8 +12,7 @@ This repository contains code pretaining to my Master's project on anomaly detec
 │
 ├── notebooks          <- For prototype coding, experiments and analysis.
 │
-├── environment.yml   <- The requirements file for reproducing the analysis environment, e.g.
-│                         generated with `pip freeze > requirements.txt`
+├── environment.yml   <- The requirements file 
 │
 └── ad_tools   
     │
