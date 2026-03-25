@@ -1,0 +1,31 @@
+name: atlas_ad_hllhc
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - typer
+  - loguru
+  - tqdm
+  - ipython
+  - jupyterlab
+  - matplotlib
+  - notebook
+  - numpy=1.26.4
+  - pandas
+  - scikit-learn
+  - ruff
+  - pytest
+  - wandb
+  - pip:
+    - python-dotenv
+    - -e .
+    - pyarrow==14.0.1
+    - torch==2.6.0
+    - torchinfo==1.8.0
+    - spconv-cu120==2.3.6
+    - awkward==2.8.9
+    - vector
+    - nflows
+
+  
