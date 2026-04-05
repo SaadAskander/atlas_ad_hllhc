@@ -8,16 +8,15 @@ This repository contains code pretaining to my Master's project on anomaly detec
 ```
 
 │
-├── models             <- Scripts for training neural networks
+├── models           <--- Scripts for training neural networks
 │
-├── notebooks          <- For prototype coding, experiments and analysis.
 │
-├── environment.yml   <- The requirements file 
+├── environment.yml  <--- The requirements file 
 │
 └── ad_tools   
     │
     ├── __init__.py           
-    ├──tools.py          <- Automated training and testing loops.
+    ├──  tools.py    <--- Automated training and testing loops.
    
 ```
 --------
