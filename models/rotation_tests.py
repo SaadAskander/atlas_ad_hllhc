@@ -412,6 +412,15 @@ class SparseVAE2(nn.Module):
         return output17.dense(), torch.flatten(mu.dense(), start_dim = 1), torch.flatten(logvar.dense(), start_dim = 1),torch.flatten(z.dense(), start_dim = 1)
 
 
+"""
+print("Baseline VAE")
+model = BetaVAEMark3(latent_dim = 4).to(device)
+model.load_state_dict(torch.load("/home/xzcapask/atlas_ad_hllhc/data/model_data/BetaVAEMark3/best_tuning/l4/1e_1/weights/BetaVAEMark3L4_weights_epoch100.pth"))
+tools.test(model = model,
+        signal_acceptance_directory = f"/home/xzcapask/atlas_ad_hllhc/data/model_data/BetaVAEMark3/best_tuning/l4/1e_1/signal_acceptance_rates",
+        phi_invariance_study_directory = f"/home/xzcapask/atlas_ad_hllhc/data/model_data/BetaVAEMark3/best_tuning/l4/1e_1/phi_invariance_study",
+        latent_code_directory = f"/home/xzcapask/atlas_ad_hllhc/data/model_data/BetaVAEMark3/best_tuning/l4/1e_1/latent_vectors",
+        testing_losses_directory = f"/home/xzcapask/atlas_ad_hllhc/data/model_data/BetaVAEMark3/best_tuning/l4/1e_1/testing_losses")
 
 print("Sparse Rotation")
 model = SparseVAE2(latent_dim = 4).to(device)
@@ -421,3 +430,12 @@ tools.test(model = model,
         phi_invariance_study_directory = f"/home/xzcapask/atlas_ad_hllhc/data/model_data/SparseVAE2/7e_2/phi_invariance_study",
         latent_code_directory = f"/home/xzcapask/atlas_ad_hllhc/data/model_data/SparseVAE2/7e_2/latent_vectors",
         testing_losses_directory = f"/home/xzcapask/atlas_ad_hllhc/data/model_data/SparseVAE2/7e_2/testing_losses")
+"""
+print("NFVAE")
+model = NFVAE(latent_dim = 4).to(device)
+model.load_state_dict(torch.load("/home/xzcapask/atlas_ad_hllhc/data/model_data/NFVAE1/NFBest/l4/4e_1/weights/NFVAEL4_weights_epoch100.pth"))
+tools.test(model = model,
+        signal_acceptance_directory = f"/home/xzcapask/atlas_ad_hllhc/data/model_data/NFVAE1/NFBest/l4/4e_1/signal_acceptance_rates",
+        phi_invariance_study_directory = f"/home/xzcapask/atlas_ad_hllhc/data/model_data/NFVAE1/NFBest/l4/4e_1/phi_invariance_study",
+        latent_code_directory = f"/home/xzcapask/atlas_ad_hllhc/data/model_data/NFVAE1/NFBest/l4/4e_1/latent_vectors",
+        testing_losses_directory = f"/home/xzcapask/atlas_ad_hllhc/data/model_data/NFVAE1/NFBest/l4/4e_1/testing_losses", nf=True)

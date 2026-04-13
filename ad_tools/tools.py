@@ -532,7 +532,7 @@ def test(model,signal_acceptance_directory,phi_invariance_study_directory, laten
                     batch_size = 1,shuffle = shuffle,transform1 = transform1, transform2_5=transform2_5,
                     pileup_cutoff = pileup_cutoff, transform2 = transform2, transform3 = transform3, transform4 = transform4)
         
-        transform = lambda x: torch.roll(x, shifts = 16, dims = 2)
+        transform = lambda x: torch.roll(x, shifts = 16, dims = 3)
         vbf_test_pi4_dataset = ATLASMapStyleDatasetMaker(filepath =
                     "/home/xzcapask/atlas_ad_hllhc/data/atlas_calorimeter_images/VBF_SM_HH4b.parquet",
                     lower_row_index = 0,
@@ -540,7 +540,7 @@ def test(model,signal_acceptance_directory,phi_invariance_study_directory, laten
                     transform = transform, batch_size = 1,shuffle = shuffle,transform1 = transform1, transform2_5=transform2_5,
                     pileup_cutoff = pileup_cutoff, transform2 = transform2, transform3 = transform3, transform4 = transform4)
         
-        transform = lambda x: torch.roll(x, shifts = 32, dims = 2)
+        transform = lambda x: torch.roll(x, shifts = 32, dims = 3)
         vbf_test_pi2_dataset = ATLASMapStyleDatasetMaker(filepath =
                     "/home/xzcapask/atlas_ad_hllhc/data/atlas_calorimeter_images/VBF_SM_HH4b.parquet",
                     lower_row_index = 0,
@@ -548,7 +548,7 @@ def test(model,signal_acceptance_directory,phi_invariance_study_directory, laten
                     transform = transform, batch_size=1,shuffle = shuffle,transform1 = transform1, transform2_5=transform2_5,
                     pileup_cutoff = pileup_cutoff, transform2 = transform2, transform3 = transform3, transform4 = transform4)
         
-        transform = lambda x: torch.roll(x, shifts = 48, dims = 2)
+        transform = lambda x: torch.roll(x, shifts = 48, dims = 3)
         vbf_test_3pi4_dataset = ATLASMapStyleDatasetMaker(filepath =
                     "/home/xzcapask/atlas_ad_hllhc/data/atlas_calorimeter_images/VBF_SM_HH4b.parquet",
                     lower_row_index = 0,
@@ -557,7 +557,7 @@ def test(model,signal_acceptance_directory,phi_invariance_study_directory, laten
                     pileup_cutoff = pileup_cutoff, transform2 = transform2, transform3 = transform3, transform4 = transform4)
         
         
-        transform = lambda x: torch.roll(x, shifts = 16, dims = 2)
+        transform = lambda x: torch.roll(x, shifts = 16, dims = 3)
         ggf_test_pi4_dataset = ATLASMapStyleDatasetMaker(filepath =
                     "/home/xzcapask/atlas_ad_hllhc/data/atlas_calorimeter_images/ggF_SM_HH4b.parquet",
                     lower_row_index = 0,
@@ -565,7 +565,7 @@ def test(model,signal_acceptance_directory,phi_invariance_study_directory, laten
                     transform = transform, batch_size = 1,shuffle = shuffle,transform1 = transform1, transform2_5=transform2_5,
                     pileup_cutoff = pileup_cutoff, transform2 = transform2, transform3 = transform3, transform4 = transform4)
         
-        transform = lambda x: torch.roll(x, shifts = 32, dims = 2)
+        transform = lambda x: torch.roll(x, shifts = 32, dims = 3)
         ggf_test_pi2_dataset = ATLASMapStyleDatasetMaker(filepath =
                     "/home/xzcapask/atlas_ad_hllhc/data/atlas_calorimeter_images/ggF_SM_HH4b.parquet",
                     lower_row_index = 0,
@@ -573,7 +573,7 @@ def test(model,signal_acceptance_directory,phi_invariance_study_directory, laten
                     transform = transform, batch_size=1,shuffle = shuffle,transform1 = transform1, transform2_5=transform2_5,
                     pileup_cutoff = pileup_cutoff, transform2 = transform2, transform3 = transform3, transform4 = transform4)
         
-        transform = lambda x: torch.roll(x, shifts = 48, dims = 2)
+        transform = lambda x: torch.roll(x, shifts = 48, dims = 3)
         ggf_test_3pi4_dataset = ATLASMapStyleDatasetMaker(filepath =
                     "/home/xzcapask/atlas_ad_hllhc/data/atlas_calorimeter_images/ggF_SM_HH4b.parquet",
                     lower_row_index = 0,
@@ -581,7 +581,7 @@ def test(model,signal_acceptance_directory,phi_invariance_study_directory, laten
                     transform = transform, batch_size=1,shuffle = shuffle,transform1 = transform1, transform2_5=transform2_5,
                     pileup_cutoff = pileup_cutoff, transform2 = transform2, transform3 = transform3, transform4 = transform4)
 
-        transform = lambda x: torch.roll(x, shifts = 16, dims = 2)
+        transform = lambda x: torch.roll(x, shifts = 16, dims = 3)
         hs_test_pi4_dataset = ATLASMapStyleDatasetMaker(filepath =
                     "/home/xzcapask/atlas_ad_hllhc/data/atlas_calorimeter_images/HZ_bbvv.parquet",
                     lower_row_index = 0,
@@ -589,7 +589,7 @@ def test(model,signal_acceptance_directory,phi_invariance_study_directory, laten
                     transform = transform, batch_size = 1,shuffle = shuffle,transform1 = transform1, transform2_5=transform2_5,
                     pileup_cutoff = pileup_cutoff, transform2 = transform2, transform3 = transform3, transform4 = transform4)
         
-        transform = lambda x: torch.roll(x, shifts = 32, dims = 2)
+        transform = lambda x: torch.roll(x, shifts = 32, dims = 3)
         hs_test_pi2_dataset = ATLASMapStyleDatasetMaker(filepath =
                     "/home/xzcapask/atlas_ad_hllhc/data/atlas_calorimeter_images/HZ_bbvv.parquet",
                     lower_row_index = 0,
@@ -597,7 +597,7 @@ def test(model,signal_acceptance_directory,phi_invariance_study_directory, laten
                     transform = transform, batch_size=1,shuffle = shuffle,transform1 = transform1, transform2_5=transform2_5,
                     pileup_cutoff = pileup_cutoff, transform2 = transform2, transform3 = transform3, transform4 = transform4)
         
-        transform = lambda x: torch.roll(x, shifts = 48, dims = 2)
+        transform = lambda x: torch.roll(x, shifts = 48, dims = 3)
         hs_test_3pi4_dataset = ATLASMapStyleDatasetMaker(filepath =
                     "/home/xzcapask/atlas_ad_hllhc/data/atlas_calorimeter_images/HZ_bbvv.parquet",
                     lower_row_index = 0,
@@ -605,7 +605,7 @@ def test(model,signal_acceptance_directory,phi_invariance_study_directory, laten
                     transform = transform, batch_size=1,shuffle = shuffle,transform1 = transform1, transform2_5=transform2_5,
                     pileup_cutoff = pileup_cutoff, transform2 = transform2, transform3 = transform3, transform4 = transform4)
 
-        transform = lambda x: torch.roll(x, shifts = 16, dims = 2)
+        transform = lambda x: torch.roll(x, shifts = 16, dims = 3)
         jz0_test_pi4_dataset = ATLASMapStyleDatasetMaker(filepath =
                     "/home/xzcapask/atlas_ad_hllhc/data/atlas_calorimeter_images/JZ0_no_filter.parquet",
                     lower_row_index = 200,
@@ -613,7 +613,7 @@ def test(model,signal_acceptance_directory,phi_invariance_study_directory, laten
                     transform = transform, batch_size = 1,shuffle = shuffle,transform1 = transform1, transform2_5=transform2_5,
                     pileup_cutoff = pileup_cutoff, transform2 = transform2, transform3 = transform3, transform4 = transform4)
         
-        transform = lambda x: torch.roll(x, shifts = 32, dims = 2)
+        transform = lambda x: torch.roll(x, shifts = 32, dims = 3)
         jz0_test_pi2_dataset = ATLASMapStyleDatasetMaker(filepath =
                     "/home/xzcapask/atlas_ad_hllhc/data/atlas_calorimeter_images/JZ0_no_filter.parquet",
                     lower_row_index = 200,
@@ -621,7 +621,7 @@ def test(model,signal_acceptance_directory,phi_invariance_study_directory, laten
                     transform = transform, batch_size=1,shuffle = shuffle,transform1 = transform1, transform2_5=transform2_5,
                     pileup_cutoff = pileup_cutoff, transform2 = transform2, transform3 = transform3, transform4 = transform4)
         
-        transform = lambda x: torch.roll(x, shifts = 48, dims = 2)
+        transform = lambda x: torch.roll(x, shifts = 48, dims = 3)
         jz0_test_3pi4_dataset = ATLASMapStyleDatasetMaker(filepath =
                     "/home/xzcapask/atlas_ad_hllhc/data/atlas_calorimeter_images/JZ0_no_filter.parquet",
                     lower_row_index = 200,
@@ -951,7 +951,7 @@ def test(model,signal_acceptance_directory,phi_invariance_study_directory, laten
                     batch_size = 1,shuffle = shuffle,transform1 = transform1, transform2_5=transform2_5,
                     pileup_cutoff = pileup_cutoff, transform2 = transform2, transform3 = transform3, transform4 = transform4)
         
-        transform = lambda x: torch.roll(x, shifts = 16, dims = 2)
+        transform = lambda x: torch.roll(x, shifts = 16, dims = 3)
         vbf_test_pi4_dataset = ATLASMapStyleDatasetMaker(filepath =
                     "/home/xzcapask/atlas_ad_hllhc/data/atlas_calorimeter_images/VBF_SM_HH4b.parquet",
                     lower_row_index = 0,
@@ -959,7 +959,7 @@ def test(model,signal_acceptance_directory,phi_invariance_study_directory, laten
                     transform = transform, batch_size = 1,shuffle = shuffle,transform1 = transform1, transform2_5=transform2_5,
                     pileup_cutoff = pileup_cutoff, transform2 = transform2, transform3 = transform3, transform4 = transform4)
         
-        transform = lambda x: torch.roll(x, shifts = 32, dims = 2)
+        transform = lambda x: torch.roll(x, shifts = 32, dims = 3)
         vbf_test_pi2_dataset = ATLASMapStyleDatasetMaker(filepath =
                     "/home/xzcapask/atlas_ad_hllhc/data/atlas_calorimeter_images/VBF_SM_HH4b.parquet",
                     lower_row_index = 0,
@@ -967,7 +967,7 @@ def test(model,signal_acceptance_directory,phi_invariance_study_directory, laten
                     transform = transform, batch_size=1,shuffle = shuffle,transform1 = transform1, transform2_5=transform2_5,
                     pileup_cutoff = pileup_cutoff, transform2 = transform2, transform3 = transform3, transform4 = transform4)
         
-        transform = lambda x: torch.roll(x, shifts = 48, dims = 2)
+        transform = lambda x: torch.roll(x, shifts = 48, dims = 3)
         vbf_test_3pi4_dataset = ATLASMapStyleDatasetMaker(filepath =
                     "/home/xzcapask/atlas_ad_hllhc/data/atlas_calorimeter_images/VBF_SM_HH4b.parquet",
                     lower_row_index = 0,
@@ -976,7 +976,7 @@ def test(model,signal_acceptance_directory,phi_invariance_study_directory, laten
                     pileup_cutoff = pileup_cutoff, transform2 = transform2, transform3 = transform3, transform4 = transform4)
         
         
-        transform = lambda x: torch.roll(x, shifts = 16, dims = 2)
+        transform = lambda x: torch.roll(x, shifts = 16, dims = 3)
         ggf_test_pi4_dataset = ATLASMapStyleDatasetMaker(filepath =
                     "/home/xzcapask/atlas_ad_hllhc/data/atlas_calorimeter_images/ggF_SM_HH4b.parquet",
                     lower_row_index = 0,
@@ -984,7 +984,7 @@ def test(model,signal_acceptance_directory,phi_invariance_study_directory, laten
                     transform = transform, batch_size = 1,shuffle = shuffle,transform1 = transform1, transform2_5=transform2_5,
                     pileup_cutoff = pileup_cutoff, transform2 = transform2, transform3 = transform3, transform4 = transform4)
         
-        transform = lambda x: torch.roll(x, shifts = 32, dims = 2)
+        transform = lambda x: torch.roll(x, shifts = 32, dims = 3)
         ggf_test_pi2_dataset = ATLASMapStyleDatasetMaker(filepath =
                     "/home/xzcapask/atlas_ad_hllhc/data/atlas_calorimeter_images/ggF_SM_HH4b.parquet",
                     lower_row_index = 0,
@@ -992,7 +992,7 @@ def test(model,signal_acceptance_directory,phi_invariance_study_directory, laten
                     transform = transform, batch_size=1,shuffle = shuffle,transform1 = transform1, transform2_5=transform2_5,
                     pileup_cutoff = pileup_cutoff, transform2 = transform2, transform3 = transform3, transform4 = transform4)
         
-        transform = lambda x: torch.roll(x, shifts = 48, dims = 2)
+        transform = lambda x: torch.roll(x, shifts = 48, dims = 3)
         ggf_test_3pi4_dataset = ATLASMapStyleDatasetMaker(filepath =
                     "/home/xzcapask/atlas_ad_hllhc/data/atlas_calorimeter_images/ggF_SM_HH4b.parquet",
                     lower_row_index = 0,
@@ -1000,7 +1000,7 @@ def test(model,signal_acceptance_directory,phi_invariance_study_directory, laten
                     transform = transform, batch_size=1,shuffle = shuffle,transform1 = transform1, transform2_5=transform2_5,
                     pileup_cutoff = pileup_cutoff, transform2 = transform2, transform3 = transform3, transform4 = transform4)
 
-        transform = lambda x: torch.roll(x, shifts = 16, dims = 2)
+        transform = lambda x: torch.roll(x, shifts = 16, dims = 3)
         hs_test_pi4_dataset = ATLASMapStyleDatasetMaker(filepath =
                     "/home/xzcapask/atlas_ad_hllhc/data/atlas_calorimeter_images/HZ_bbvv.parquet",
                     lower_row_index = 0,
@@ -1008,7 +1008,7 @@ def test(model,signal_acceptance_directory,phi_invariance_study_directory, laten
                     transform = transform, batch_size = 1,shuffle = shuffle,transform1 = transform1, transform2_5=transform2_5,
                     pileup_cutoff = pileup_cutoff, transform2 = transform2, transform3 = transform3, transform4 = transform4)
         
-        transform = lambda x: torch.roll(x, shifts = 32, dims = 2)
+        transform = lambda x: torch.roll(x, shifts = 32, dims = 3)
         hs_test_pi2_dataset = ATLASMapStyleDatasetMaker(filepath =
                     "/home/xzcapask/atlas_ad_hllhc/data/atlas_calorimeter_images/HZ_bbvv.parquet",
                     lower_row_index = 0,
@@ -1016,7 +1016,7 @@ def test(model,signal_acceptance_directory,phi_invariance_study_directory, laten
                     transform = transform, batch_size=1,shuffle = shuffle,transform1 = transform1, transform2_5=transform2_5,
                     pileup_cutoff = pileup_cutoff, transform2 = transform2, transform3 = transform3, transform4 = transform4)
         
-        transform = lambda x: torch.roll(x, shifts = 48, dims = 2)
+        transform = lambda x: torch.roll(x, shifts = 48, dims = 3)
         hs_test_3pi4_dataset = ATLASMapStyleDatasetMaker(filepath =
                     "/home/xzcapask/atlas_ad_hllhc/data/atlas_calorimeter_images/HZ_bbvv.parquet",
                     lower_row_index = 0,
@@ -1024,7 +1024,7 @@ def test(model,signal_acceptance_directory,phi_invariance_study_directory, laten
                     transform = transform, batch_size=1,shuffle = shuffle,transform1 = transform1, transform2_5=transform2_5,
                     pileup_cutoff = pileup_cutoff, transform2 = transform2, transform3 = transform3, transform4 = transform4)
         
-        transform = lambda x: torch.roll(x, shifts = 16, dims = 2)
+        transform = lambda x: torch.roll(x, shifts = 16, dims = 3)
         jz0_test_pi4_dataset = ATLASMapStyleDatasetMaker(filepath =
                     "/home/xzcapask/atlas_ad_hllhc/data/atlas_calorimeter_images/JZ0_no_filter.parquet",
                     lower_row_index = 200,
@@ -1032,7 +1032,7 @@ def test(model,signal_acceptance_directory,phi_invariance_study_directory, laten
                     transform = transform, batch_size = 1,shuffle = shuffle,transform1 = transform1, transform2_5=transform2_5,
                     pileup_cutoff = pileup_cutoff, transform2 = transform2, transform3 = transform3, transform4 = transform4)
         
-        transform = lambda x: torch.roll(x, shifts = 32, dims = 2)
+        transform = lambda x: torch.roll(x, shifts = 32, dims = 3)
         jz0_test_pi2_dataset = ATLASMapStyleDatasetMaker(filepath =
                     "/home/xzcapask/atlas_ad_hllhc/data/atlas_calorimeter_images/JZ0_no_filter.parquet",
                     lower_row_index = 200,
@@ -1040,7 +1040,7 @@ def test(model,signal_acceptance_directory,phi_invariance_study_directory, laten
                     transform = transform, batch_size=1,shuffle = shuffle,transform1 = transform1, transform2_5=transform2_5,
                     pileup_cutoff = pileup_cutoff, transform2 = transform2, transform3 = transform3, transform4 = transform4)
         
-        transform = lambda x: torch.roll(x, shifts = 48, dims = 2)
+        transform = lambda x: torch.roll(x, shifts = 48, dims = 3)
         jz0_test_3pi4_dataset = ATLASMapStyleDatasetMaker(filepath =
                     "/home/xzcapask/atlas_ad_hllhc/data/atlas_calorimeter_images/JZ0_no_filter.parquet",
                     lower_row_index = 200,
